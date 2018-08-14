@@ -15,10 +15,10 @@ RUN curl -fsSL https://download.java.net/java/early_access/alpine/${JAVA_VERSION
 RUN cd /usr/share/jdk-11/bin && \
     ./jlink \
     --no-header-files \
-	--no-man-pages \
-	--output ~/jre \
-	--module-path ../jmods \
-	--add-modules java.base,java.compiler,java.datatransfer,java.instrument,java.logging,java.management,java.management.rmi,java.naming,java.net.http,java.prefs,java.rmi,java.scripting,java.se,java.security.jgss,java.security.sasl,java.smartcardio,java.sql,java.sql.rowset,java.transaction.xa,java.xml,java.xml.crypto
+    --no-man-pages \
+    --output ~/jre \
+    --module-path ../jmods \
+    --add-modules java.base,java.compiler,java.datatransfer,java.instrument,java.logging,java.management,java.management.rmi,java.naming,java.net.http,java.prefs,java.rmi,java.scripting,java.se,java.security.jgss,java.security.sasl,java.smartcardio,java.sql,java.sql.rowset,java.transaction.xa,java.xml,java.xml.crypto
 
 FROM alpine:3.8
 
